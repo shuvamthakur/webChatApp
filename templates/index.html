@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Chat App</title>
+</head>
+<body>
+<h1>CHAT AWAY</h1>
+<h3>Hi {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Guest{% endif %}</h3>
+<form action='/chat'>
+    <label>Enter your alias and room for this session</label>
+    <div>
+        <label>Alias:</label>
+        <input type="text" name="username">
+    </div>
+    <div>
+        <label>Room ID:</label>
+        <input type="text" name="roomid">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>
